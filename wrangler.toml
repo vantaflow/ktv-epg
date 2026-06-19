@@ -1,0 +1,10 @@
+name = "ktv-epg"
+main = "src/worker.js"
+compatibility_date = "2026-01-01"
+
+# Rafraîchit le cache sport toutes les 30 min
+[triggers]
+crons = ["*/30 * * * *"]
+
+[observability]
+enabled = true
