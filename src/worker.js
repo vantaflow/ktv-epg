@@ -21,7 +21,9 @@ function chanNorm(s) {
   x = x.replace(/^[^:|]{1,12}[:|]\s*/, '');
   x = x.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
     .replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g, (m) => SUP_DIGITS.indexOf(m));
-  return x.split(/[^a-z0-9]+/).map((t) => ALIASES[t] || t).filter((t) => t && !NOISE.has(t)).join('');
+  const k = x.split(/[^a-z0-9]+/).map((t) => ALIASES[t] || t).filter((t) => t && !NOISE.has(t)).join('');
+  // "BEIN MAX 4" == "beIN SPORTS MAX 4" -> même clé
+  return k.replace(/^beinmax(\d)/, 'beinsportmax$1');
 }
 function decodeEntities(s) {
   return String(s || '').replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"')
