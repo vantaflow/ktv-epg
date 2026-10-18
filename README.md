@@ -1,6 +1,6 @@
 # ktv-epg
 
-API EPG « sport » pour [KTV](https://github.com/khalilbenaz/ktv) — Cloudflare Worker.
+API EPG « sport » pour [KTV](https://github.com/vantaflow/ktv) — Cloudflare Worker.
 
 Agrège la grille TV sport du jour depuis des sources publiques et la renvoie
 **normalisée par nom de chaîne** (même algorithme que KTV), en **epochs UTC**
