@@ -33,5 +33,5 @@ Cache edge (`caches.default`) 30 min + cron `*/30` de rafraîchissement.
 
 ```bash
 wrangler dev      # local
-wrangler deploy   # -> https://ktv-epg.khalilbenaz.workers.dev
+wrangler deploy   # -> https://ktv-epg.bmwmfcknzb.workers.dev
 ```
